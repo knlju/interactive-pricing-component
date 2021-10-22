@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+:root {
+    --fullSliderBar: hsl(174, 77%, 80%);
+    --sliderBg: hsl(174, 86%, 45%);
+    --discountBg: hsl(14, 92%, 95%);
+    --discountText: hsl(15, 100%, 70%);
+    --CTAtext: hsl(226, 100%, 87%);
+    --pricingBg: hsl(0, 0%, 100%);
+    --mainBg: hsl(230, 100%, 99%);
+    --emptySliderbar: hsl(224, 65%, 95%);
+    --toggleBg: hsl(223, 50%, 87%);
+    --text: hsl(225, 20%, 60%);
+    --textCTAbg: hsl(227, 35%, 25%);
+}
+
+body {
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background-image: url(images/bg-pattern.svg);
+    background-color: var(--mainBg);
+    background-size: 100% 450px;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-size: 15px;
+}
+
+.wrapper-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding-top: 67px;
+    padding-bottom: 88px;
+    /* min-height: 100vh; */
+}
+
+.wrapper-actually {
+    max-width: 540px;
+    display: flex;
+    gap: 54px;
+    flex-direction: column;
+    margin: 0 24px;
+}
+
+.top-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 145px;
+    background-image: url(images/pattern-circles.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.top-wrapper-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: var(--textCTAbg);
+}
+
+.top-wrapper-title-info {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text);
+}
+
+.content-wrapper-container {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+    border-radius: 8px;
+}
+
+.content-container {
+    padding: 40px 48px;
+}
+
+.container-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.slider-wrapper {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    height: 8px;
+    background-color: var(--emptySliderbar);
+    border-radius: 10px;
+}
+
+.wrapper-again {
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.wrapper-v2 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.dollas-wrapper {
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: -1px;
+    color: var(--textCTAbg);
+}
+
+.per-month-container {
+    color: var(--text);
+    font-size: 16px;
+}
+
+.billing-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 17px;
+    color: var(--text);
+    gap: 16px;
+    font-size: 12px;
+}
+
+.yearly-billing-wrapper {
+    padding-right: 9px;
+}
+
+.discount-wrapper {
+    color: var(--discountText);
+    background-color: var(--discountBg);
+    border-radius: 10px;
+    padding: 3px 7px;
+    font-size: 10px;
+}
+
+.slider-wrapper {
+    width: 444px;
+}
+
+.picker {
+    background-color: var(--toggleBg);
+    border-radius: 10px;
+}
+
+.picker:hover {
+    background-color: var(--fullSliderBar);
+}
+
+.ball {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 4px 25px 4px 4px;
+}
+
+.footer-container {
+    border-top: 1px solid var(--emptySliderbar);
+    padding: 32px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checklist-checked {
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.checklist-checked > *:nth-child(1) {
+    margin-right: 16px;
+}
+
+.action {
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    padding: 13px 46px;
+    color: var(--CTAtext);
+    background-color: var(--textCTAbg);
+    border-radius: 21px;
+    outline: none;
+    border: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.slider-thingy {
+    height: 40px;
+    width: 40px;
+    box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+    background-color: var(--sliderBg);
+    border-radius: 50%;
+    position: relative;
+    top: -24px;
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-size: 22px 13px;
+    background-position: center;
+}
+
+.slider-thingy:active {
+    cursor: grabbing;
+}
+
+.full-slider-bar {
+    background-color: var(--fullSliderBar);
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+}
