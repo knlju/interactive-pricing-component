@@ -15,7 +15,6 @@ const pageViewsNode = document.querySelector(".number-wrapper")
 const dollazNode = document.querySelector(".dollas-number-wrapper")
 
 const billingPickerNode = document.querySelector(".picker")
-const ballNode = billingPickerNode.querySelector(".ball")
 
 const body = document.querySelector("body")
 const slider = document.querySelector(".slider-wrapper")
@@ -27,7 +26,7 @@ let draggedNode = null
 const renderData = () => {
     pageViewsNode.textContent = pvc
     dollazNode.textContent = (yearlyBilling ? pc * .75 : pc).toFixed(2)
-    yearlyBilling ? ballNode.classList.add("selected") : ballNode.classList.remove("selected")
+    yearlyBilling ? billingPickerNode.classList.add("selected") : billingPickerNode.classList.remove("selected")
     const step = Math.round(slider.getBoundingClientRect().width / 4)
     handle.style.left = (step * cpc - 20) + "px"
     bar.style.width = step * cpc + "px"
@@ -39,11 +38,11 @@ billingPickerNode.addEventListener("click", () => {
 })
 
 const handleDrag = e => {
+    e.preventDefault()
     if(draggedNode !== handle) return
     // quick maths
     const sw = slider.getBoundingClientRect().width
     // gl debugging :)
-    console.log(e)
     const cp = Math.min(Math.max(Math.floor(((e.clientX || e.changedTouches[0].clientX) - (body.clientWidth - sw) / 2) / Math.round(sw / 5)), 0), 4)
     let { p, pv } = billings[cp]
     if (p !== pc) [pc, pvc, cpc] = [p, pv, cp], renderData()

@@ -163,8 +163,12 @@ body {
     transition: right .1s ease-in;
 }
 
-.selected {
+.selected .ball {
     right: -21px;
+}
+
+.selected {
+    background-color: var(--fullSliderBar);
 }
 
 .footer-container {
@@ -178,6 +182,7 @@ body {
 .checklist-checked {
     margin-bottom: 10px;
     color: var(--text);
+    font-size: 12px;
 }
 
 .checklist-checked>*:nth-child(1) {
@@ -267,9 +272,6 @@ body {
     .footer-container {
         flex-direction: column;
         gap: 22px;
-    }
-    .checklist-checked {
-        font-size: 12px;
     }
     .action {
         font-size: 12px;
